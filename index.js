@@ -29,7 +29,7 @@ bot.on('message', async (msg) => {
     if (chatType === 'group' || chatType === 'supergroup') {
         const isReplyToBot = msg.reply_to_message && msg.reply_to_message.from.username === botUsername;
         const isTagged = botUsername && text.toLowerCase().includes(`@${botUsername.toLowerCase()}`);
-        const isCalledByName = text.toLowerCase().includes('mashu');
+        const isCalledByName = text.toLowerCase().includes(process.env.BOT_NAME?.toLowerCase() || 'mashu');
 
         if (!isReplyToBot && !isTagged && !isCalledByName) {
             return;
@@ -54,7 +54,7 @@ bot.on('message', async (msg) => {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
-                model: 'qwen2.5:3b',
+                model: process.env.OLLAMA_MODEL || 'qwen2.5:3b',
                 messages: history,
                 stream: false
             })
