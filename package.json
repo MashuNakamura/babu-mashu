@@ -1,0 +1,25 @@
+{
+  "name": "bot-ai-local",
+  "private": true,
+  "devDependencies": {
+    "@tgcloud/cli": "^0.1.2"
+  },
+  "version": "0.1.0",
+  "scripts": {
+    "deploy": "tgcloud push",
+    "status": "tgcloud status",
+    "run": "tgcloud run"
+  },
+  "description": "Telegram bot using serverless platform",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "node-telegram-bot-api": "^0.66.0"
+  }
+}
