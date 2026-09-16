@@ -16,8 +16,8 @@
     "lib": "lib"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Mashyren",
+  "license": "MIT",
   "dependencies": {
     "dotenv": "^17.4.2",
     "node-telegram-bot-api": "^0.66.0"
